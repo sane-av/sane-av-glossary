@@ -1,0 +1,54 @@
+name: New Glossary Term
+description: Add a new term to the glossary
+title: "[New Term] "
+labels: ["new-term"]
+body:
+  - type: input
+    id: term
+    attributes:
+      label: Term
+      placeholder: "e.g., Balanced Audio Circuit"
+    validations:
+      required: true
+  - type: input
+    id: abbreviation
+    attributes:
+      label: Abbreviation (optional)
+      placeholder: "e.g., BAL"
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Audio
+        - Video
+        - Networking
+        - Signal Processing
+        - Connectors & Cabling
+        - Control Systems
+        - Acoustics
+        - General
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition
+      description: A clear, concise definition (1-3 sentences)
+    validations:
+      required: true
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Terms (optional)
+      description: One term per line
+      placeholder: |
+        Unbalanced Audio Circuit
+        Common Mode Rejection
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Agreement
+      options:
+        - label: I understand that accepted glossary entries will be licensed under CC BY-SA 4.0
+          required: true

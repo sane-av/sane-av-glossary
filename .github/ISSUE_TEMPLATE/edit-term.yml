@@ -1,0 +1,25 @@
+name: Edit Glossary Term
+description: Suggest a correction or improvement to an existing term
+title: "[Edit] "
+labels: ["edit"]
+body:
+  - type: input
+    id: term
+    attributes:
+      label: Which term?
+      description: The name of the term to edit
+      placeholder: "e.g., Balanced Audio Circuit"
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: What should change?
+      description: Describe the change and why
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source (optional)
+      description: Link to a reference, datasheet, or spec that supports the edit
